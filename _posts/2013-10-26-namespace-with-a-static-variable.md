@@ -13,7 +13,7 @@ keywords: C++
 #pragma once
 namespace NS1
 {
-	static int var = 10;
+    static int var = 10;
 }
 void print_var();
 ```
@@ -26,7 +26,7 @@ void print_var();
 
 void print_var()
 {
-	printf("%d\n", NS1::var);
+    printf("%d\n", NS1::var);
 }
 ```
 
@@ -38,10 +38,10 @@ void print_var()
 
 int main()
 {
-	printf("%d\n", NS1::var);
-	NS1::var = 0;
-	print_var();
-	return 0;
+    printf("%d\n", NS1::var);
+    NS1::var = 0;
+    print_var();
+    return 0;
 }
 ```
 
@@ -50,7 +50,6 @@ int main()
 **Situation A:**
 将 header.h 里的 var 的 static 去掉，发现编译通过，但是链接时提示：
 `main.obj : error LNK2005: "int NS1::var" (?var@NS1@@3HA) 已经在 src.obj 中定义，fatal error LNK1169: 找到一个或多个多重定义的符号。`
-
 
 **Situation B:**
 还原 static，编译通过，运行生成的 EXE，输出：`10 10` 与预期的`10 0`不符。
@@ -63,10 +62,12 @@ int main()
 ```cpp
 printf("%d address is : 0x%X\n", NS1::var, &NS1::var);
 ```
+
 输出为：
 
 ```
 10 address is : 0x3C8004
 10 address is : 0x3C8000
 ```
+
 可见两个源文件中的 var 非同一个。

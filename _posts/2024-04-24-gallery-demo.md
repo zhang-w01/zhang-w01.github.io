@@ -18,7 +18,7 @@ mindmap2: false
 
 图片来源：本博客早期博文。
 
-<a href="/images/blog/1024-gold.png"><img src="/images/blog/1024-gold.png"></a>
+<a href="/images/blog/1024-gold.png"><img title="" src="file:///images/blog/1024-gold.png" alt=""></a>
 <a href="/images/blog/1024-kuaishou.jpeg"><img src="/images/blog/1024-kuaishou.jpeg"></a>
 <a href="/images/blog/1024-meituan.jpeg"><img src="/images/blog/1024-meituan.jpeg"></a>
 <a href="/images/blog/1024-sogou.jpeg"><img src="/images/blog/1024-sogou.jpeg"></a>

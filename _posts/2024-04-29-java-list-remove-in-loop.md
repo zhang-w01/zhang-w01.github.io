@@ -82,8 +82,8 @@ for (String str : list) {
 
 ```
 Exception in thread "main" java.util.ConcurrentModificationException
-	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:911)
-	at java.util.ArrayList$Itr.next(ArrayList.java:861)
+    at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:911)
+    at java.util.ArrayList$Itr.next(ArrayList.java:861)
 ```
 
 由此可以推测，`for (String str : list)` 这种写法实际只是一个语法糖，编译器会将其转换为迭代器的写法：

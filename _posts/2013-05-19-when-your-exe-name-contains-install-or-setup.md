@@ -11,20 +11,20 @@ keywords: EXE, Windows
 在 Windows Vista+ 系统下，若 EXE 文件名中包含有「install」、「update」或「setup」等字样，可能出现如下问题：
 
 1. 每次软件运行完退出后会弹出「程序兼容性助手」（Program Compatibility Assistant, 简称 PCA），提示软件未正确安装。
-
+   
    ![](/images/posts/windows/pca.png)
 
 2. 在 Vista+ 的操作系统下任务栏右键该程序缺少「将此程序锁定到任务栏」和软件名同名项。
-
-   | 程序名    | 运行时任务栏右键                     |
-   |-----------|--------------------------------------|
+   
+   | 程序名       | 运行时任务栏右键                             |
+   | --------- | ------------------------------------ |
    | a.exe     | ![](/images/posts/windows/a.png)     |
    | setup.exe | ![](/images/posts/windows/setup.png) |
 
 3. 你的程序没打算要求管理员权限的，但是运行的时候却弹 UAC 了。
-
+   
    完全相同的两个 EXE 文件，名字不一样：
-
+   
    ![](/images/posts/windows/name.png)
 
 ### 问题分析
@@ -34,11 +34,11 @@ keywords: EXE, Windows
 MSDN 关于「程序兼容性助手」的相关问答：
 
 > 1. What is the detection logic, and how does PCA know that the setup failed due to version problems?
-> 
+>    
 >     PCA does not specifically look for the setup's failing due to version problems. The logic used by PCA is to detect if a setup did not complete successfully. It monitors a program detected as setup by Windows Vista and Windows Server 2008 and checks whether the program registers an entry in Add or Remove Programs (ARP). If no entries are created in ARP, PCA concludes that the installer did not complete successfully. It will then wait for the install program to terminate before displaying the UI. If it is an uninstaller, the detection looks for whether an entry was deleted from ARP.
 > 
 > 2. How does PCA get information about the setup programs?
-> 
+>    
 >     PCA relies on the User Account Control (UAC) feature in Windows Vista and Windows Server 2008 to know whether a program is a setup program. UAC includes detection for setup programs and will make sure the detected setup programs will be run as Administrator, which includes getting administrative credentials or confirmation from the user before launching the program.
 
 原文链接：[Application Compatibility: Program Compatibility Assistant (PCA)](https://msdn.microsoft.com/zh-cn/bb756937)
@@ -71,7 +71,6 @@ MSDN 关于「安装程序检测」的相关介绍：
 * [Application Manifest](https://msdn.microsoft.com/en-us/library/windows/desktop/dd371711(v=vs.85).aspx)
 * [Application Compatibility: UAC: Standard User Changes](https://msdn.microsoft.com/zh-cn/enus/library/bb963893.aspx)
 
-
 ### 解决方案
 
 **问题 1：**
@@ -95,8 +94,8 @@ MSDN 关于「安装程序检测」的相关介绍：
     </compatibility>
   </assembly>
 ```
-三、程序运行时在注册表项 `HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Persisted` 下写入以可执行文件全路径为名，值为 REG_DWORD 类型的 1 的项。
 
+三、程序运行时在注册表项 `HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Persisted` 下写入以可执行文件全路径为名，值为 REG_DWORD 类型的 1 的项。
 
 **问题 2 和 3：**
 

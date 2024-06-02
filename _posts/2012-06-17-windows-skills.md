@@ -9,7 +9,7 @@ keywords: Windows, Skill
 **目录**
 
 * TOC
-{:toc}
+  {:toc}
 
 ### Win7 不按 Shift，右键显示 "在此处打开命令窗口 (W)"
 
@@ -45,15 +45,15 @@ Windows Registry Editor Version 5.00
 再说原理：
 
 1. 普通文件夹右键
-
+   
    将注册表 HKEY_CLASSES_ROOT\Directory\Background\shell\cmd 下的键 Extended 改名或者删除
 
 2. 磁盘分区右键
-
+   
    将注册表 HKEY_CLASSES_ROOT\Drive\shell\cmd 下的键 Extended 改名或者删除
 
 3. 库文件夹右键
-
+   
    在注册表 HKEY_CLASSES_ROOT\LibraryFolder\background 下建立和第一条的 Directory\Background 中相同的键值
 
 ### Win7 搜索文件内容
@@ -87,22 +87,22 @@ Scancode Map 这个键值的讲解实例参见 [Keyboard and mouse class drivers
 
 可以对应理解如下：
 
-| 值         | 说明                                     |
-|------------|------------------------------------------|
-| 0x00000000 | Header: 版本。全部设置为 0。             |
-| 0x00000000 | Header: 标志。全部设置为 0。             |
-| 0x00000002 | 2 条映射条目（包括结尾的 null 条目）。   |
+| 值          | 说明                                       |
+| ---------- | ---------------------------------------- |
+| 0x00000000 | Header: 版本。全部设置为 0。                      |
+| 0x00000000 | Header: 标志。全部设置为 0。                      |
+| 0x00000002 | 2 条映射条目（包括结尾的 null 条目）。                  |
 | 0x003a001d | Caps Lock --> Left Ctrl (0x3a --> 0x1d). |
-| 0x00000000 | 终止符，即 null 条目。                   |
+| 0x00000000 | 终止符，即 null 条目。                           |
 
 ### 将任务栏库图标变成打开计算机
 
 1. 右键任务栏库图标，右键弹出菜单里的“Windows 资源管理器”，单击“属性”。
-
+   
    ![](/images/posts/windows/library-to-computer-step-1.jpg)
 
 2. 在弹出对话框里将“目标”一栏的 `%windir%\explorer.exe` 改为 `%windir%\explorer.exe ,`，即加上一个空格一个逗号。
-
+   
    ![](/images/posts/windows/library-to-computer-step-2.png)
 
 参考：[如何将Win7/Win8任务栏库图标变为打开计算机](http://jingyan.baidu.com/article/046a7b3ee71d61f9c27fa91a.html)
