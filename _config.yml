@@ -4,10 +4,10 @@
 baseurl:
 url: https://zhang-w01.github.io
 date_format: "ordinal"
-title: zhangwang
+title: zhangwang1
 subtitle: "@按时吃饭"
 description: "马壮的个人博客，公众号：闷骚的程序员"
-keywords: 码志, zhangwang, mzlogin, mazhuang, 闷骚的程序员
+keywords: 码志, zhangwang2, mzlogin, mazhuang, 闷骚的程序员
 timezone: Asia/Shanghai
 encoding: "utf-8"
 # 页面左下角显示的年份
@@ -57,7 +57,7 @@ highlight_theme: github
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: zhangwang
+author: zhangwang3
 organization: 
 organization_url: 
 github_username: zhang-w01
