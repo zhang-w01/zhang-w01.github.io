@@ -5,9 +5,9 @@ baseurl:
 url: http://anshichifan.xyz
 date_format: "ordinal"
 title: 旺旺
-subtitle: "公众号：闷骚的程序员"
-description: "马壮的个人博客，公众号：闷骚的程序员"
-keywords: 码志, Zhuang Ma, mzlogin, mazhuang, 闷骚的程序员
+subtitle: "旺旺的个人博客"
+description: "张旺个人博客"
+keywords: 张旺,旺旺,zhangwang
 timezone: Asia/Shanghai
 encoding: "utf-8"
 # 页面左下角显示的年份
@@ -57,12 +57,12 @@ highlight_theme: github
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Zhuang Ma
+author: wangwang
 organization: 
 organization_url: 
-github_username: mzlogin
-location: Wuhan, China
-email: chumpma@gmail.com
+github_username: zhang-w01
+location: BeiJing, China
+email: zhangwang0702@163.com
 
 # ---------------- #
 #    Navigation    #
