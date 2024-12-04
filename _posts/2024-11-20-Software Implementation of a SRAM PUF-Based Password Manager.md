@@ -24,7 +24,7 @@ mindmap2: false
 
 哈希函数解决方案：
 
-![](C:\Users\zw\AppData\Roaming\marktext\images\2024-08-06-21-24-01-image.png)
+![](/images/posts/srampuf/1.png)
 
  地址：$h(UID⊕PW)$ 
 
@@ -36,13 +36,13 @@ mindmap2: false
 
 将密码hash，将哈希值输入APG，puf的输出存储在数据库。
 
-![](C:\Users\zw\AppData\Roaming\marktext\images\2024-08-06-21-37-15-image.png)
+![](/images/posts/srampuf/2.png)
 
 **缺点：** 如果知道ID的话，可以测试常用的密码，与ID进行异或，查找数据库中是否有相同的地址。
 
 方案三：将地址也用puf的输出
 
-![](C:\Users\zw\AppData\Roaming\marktext\images\2024-08-06-21-42-04-image.png)
+![](/images/posts/srampuf/3.png)
 
 **优点** ：黑客即使访问到数据库，也无法读取或理解数据库中的信息。
 
@@ -52,4 +52,4 @@ mindmap2: false
 
 如果是地址值发生翻转，检查每一位发生翻转的可能。
 
-![](C:\Users\zw\AppData\Roaming\marktext\images\2024-08-06-22-19-33-image.png)
+![](/images/posts/srampuf/4.png)
